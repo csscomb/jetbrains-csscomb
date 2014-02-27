@@ -16,7 +16,7 @@ CSScomb will be available then in all menus you select.
 
 ## Configure
 
-You can place `.csscomb.json` file in the project's direcory, or your `HOME`
+You can place `.csscomb.json` file in the project's directory, or your `HOME`
 directory, or anywhere else.    
 [See
 docs](https://github.com/csscomb/csscomb.js/blob/master/doc/configuration.md#where-to-put-config) for info.
