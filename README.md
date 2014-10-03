@@ -9,7 +9,8 @@ Instead, you can use CSScomb as an external tool:
 1. Fill the form with following info:    
    – Name: `CSScomb`    
    – Program: `path_to_installed_csscomb/bin/csscomb`    
-   – Parameters: `$FilePath$`
+   – Parameters: `$FilePath$`    
+   – Working directory: `$FileDir$`
 
 All checkboxes in the form are optional, you can check whichever you want.    
 CSScomb will be available then in all menus you select.
