@@ -9,7 +9,7 @@ Instead, you can use CSScomb as an external tool:
 1. Fill the form with following info:    
    – Name: `CSScomb`    
    – Program: `path_to_installed_csscomb/bin/csscomb`    
-   – Parameters: `$FilePath$`    
+   – Parameters: `-t $FilePath$`    
    – Working directory: `$FileDir$`
 
 All checkboxes in the form are optional, you can check whichever you want.    
@@ -24,23 +24,17 @@ docs](https://github.com/csscomb/csscomb.js/blob/master/doc/configuration.md#whe
 
 ## Version Compatibility Notes
 
-If you've recently updated csscomb, you may notice it no longer work correctly as an external tool within JetBrains editors (eg. Intellij IDEA, WebStorm, PhpStorm). It does not finish the process anymore. However, it works correctly when run from the command line.
+If you've updated csscomb, you may notice it no longer work correctly as an external tool within JetBrains editors (eg. Intellij IDEA, WebStorm, PhpStorm). It does not finish the process anymore. However, it works correctly when run from the command line.
 
 To get it working again:
 1. Check if your installed version is higher than 3.1.5:
 
    ```npm -g list --depth=0```
 
-2. If so, remove it:
+2. If so, open your editor's Preferences > Tools > External Tools > CSScomb.
 
-   ```npm remove -g csscomb```
-
-3. Install version 3.1.5:
-
-   ```npm install -g csscomb@3.1.5```
-
-4. Verify version 3.1.5 is installed:
-
-   ```npm -g list --depth=0```
+3. Edit the Parameters field to include `-t`, for example:  `-t $FilePath$`. From CSScomb's documentation:
+    
+    > -t, --ttyy-mode     execution in TTY mode (useful, when running tool using external app, e.g. IDE)
    
-5. Confirm csscomb runs and exits correctly in your JetBrains editor.
+3. Confirm csscomb runs and exits correctly in your JetBrains editor.
