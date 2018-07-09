@@ -8,12 +8,14 @@ Instead, you can use CSScomb as an external tool:
 1. Click on `Add` icon (or press `⌘N` on Mac)
 1. Fill the form with following info:    
    – Name: `CSScomb`    
-   – Program: `path_to_installed_csscomb/bin/csscomb`    
+   – Program: `path_to_installed_csscomb/bin/csscomb` (see NB for Windows users below)    
    – Parameters: `$FilePath$ -t`    
    – Working directory: `$FileDir$`
 
 All checkboxes in the form are optional, you can check whichever you want.    
 CSScomb will be available then in all menus you select.
+
+NB. On Windows you may need to use `npm config get prefix` to get a directory with `csscomb.cmd`. So in "Program" field you will need to put something like `C:\Users\User\AppData\Roaming\npm\csscomb.cmd`.
 
 ## Configure
 
